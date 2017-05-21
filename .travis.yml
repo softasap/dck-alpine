@@ -8,4 +8,5 @@ install:
   - docker run --name alpine_full -d softasap/alpine_full:test
 
 script:
+  - docker ps
   - docker ps | grep -q alpine_full
