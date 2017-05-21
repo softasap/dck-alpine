@@ -1,0 +1,11 @@
+sudo: required
+
+services:
+  - docker
+  
+install:
+  - docker build -t softasap/alpine_full:test full/
+  - docker run --name alpine_full -d softasap/alpine_full:test
+
+script:
+  - docker ps | grep -q alpine_full
