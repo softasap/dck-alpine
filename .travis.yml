@@ -4,9 +4,7 @@ services:
   - docker
   
 install:
-  - docker build -t softasap/alpine_full:test full/
-  - docker run --name alpine_full -d softasap/alpine_full:test
+  - docker build -t softasap/alpine_python:test python/python-2.7
 
 script:
-  - docker ps
-  - docker ps | grep -q alpine_full
+  - docker run --name alpine_python -d softasap/alpine_python:test && echo "RUN OK"
