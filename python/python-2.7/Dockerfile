@@ -1,4 +1,3 @@
-
 FROM alpine:3.5
 
 # GLIBC
@@ -36,7 +35,7 @@ RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases
 ENV LANG=C.UTF-8
 
 # PYTHON
-RUN apk add --no-cache python && \
+RUN apk add --no-cache python python-dev ca-certificates && \
     python -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
     pip install --upgrade pip setuptools && \
