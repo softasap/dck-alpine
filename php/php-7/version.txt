@@ -1,0 +1,3 @@
+repository=php
+prefix=7-alpine-34-
+release=0.0.1
